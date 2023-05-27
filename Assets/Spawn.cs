@@ -9,18 +9,29 @@ public class Spawn : MonoBehaviour
     public float pointSpeed = 0.000003f;
     //Rigidbody2D pointRG;
     public int spawned = 0;
+    float startTime = 0;
+    float waitFor = 100;
+    bool timerStart = true;
 
 
 
-    void FixedUpdate(){
+    void Start(){
+        int spawn_number = Random.Range(0, 10);
+        spawn_number = 1;
+        //if (spawn_number == 1 && spawned <= 100)
+            StartCoroutine(waiter());
+  
+    }
 
-        float spawn_number = Random.Range(0, 2);
-        if (spawn_number == 1 && spawned <= 10)
-        {
+    IEnumerator waiter()
+    {
+                while (true){
+
             GameObject point = Instantiate(pointPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
-            //Rigidbody2D pointRG = point.GetComponent<Rigidbody2D>();
-            //pointRG.AddForce(pointPoint.up * pointSpeed, ForceMode2D.Impulse);
-            spawned+=1;
+        //Wait for 4 seconds
+        yield return new WaitForSeconds(4);
         }
     }
+
+
 }
