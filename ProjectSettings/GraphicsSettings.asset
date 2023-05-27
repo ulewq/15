@@ -4,6 +4,8 @@
 GraphicsSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
+
+  serializedVersion: 13
   m_Deferred:
     m_Mode: 1
     m_Shader: {fileID: 69, guid: 0000000000000000f000000000000000, type: 0}
@@ -39,6 +41,7 @@ GraphicsSettings:
   - {fileID: 10783, guid: 0000000000000000f000000000000000, type: 0}
   m_PreloadedShaders: []
   m_PreloadShadersBatchTimeLimit: -1
+
   m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_CustomRenderPipeline: {fileID: 0}
   m_TransparencySortMode: 0
@@ -66,3 +69,4 @@ GraphicsSettings:
   m_SRPDefaultSettings: {}
   m_CameraRelativeLightCulling: 0
   m_CameraRelativeShadowCulling: 0
+
